@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src -e js,graphql",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tiago Santos Da Silva",

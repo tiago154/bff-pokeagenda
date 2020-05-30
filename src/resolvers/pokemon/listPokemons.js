@@ -2,7 +2,7 @@ const superagent = require('superagent')
 const orderBy = require('../../util/orderBy')
 const POKEMON = 'pokemon/'
 
-const pokemons = async ({ results }) => await Promise.all(
+const pokemons = async ({ results }) => Promise.all(
   results.map(async ({ name, url }) => {
     const id = Number(url.split('pokemon/')[1].replace('/', ''))
     return {
