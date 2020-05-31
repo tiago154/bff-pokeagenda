@@ -4,3 +4,7 @@ type Pokemon {
   image: String!
   types: [String!]!
 }
+
+type Query {
+  pokemon(id: Int!): Pokemon
+}
