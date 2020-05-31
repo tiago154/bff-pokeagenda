@@ -1,0 +1,8 @@
+type Pokemons {
+  count: Int
+  pokemons: [Pokemon]
+}
+
+type Query {
+  listPokemon(offset: Int, limit: Int): Pokemons
+}

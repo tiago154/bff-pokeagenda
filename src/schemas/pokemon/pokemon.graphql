@@ -1,0 +1,6 @@
+type Pokemon {
+  id: Int!
+  name: String!
+  image: String!
+  types: [String!]!
+}

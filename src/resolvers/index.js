@@ -1,6 +1,7 @@
-const { query, listPokemon: ListPokemon } = require('./pokemon')
+const GMR = require('graphql-merge-resolvers')
+const pokemons = require('./pokemons')
+const pokemon = require('./pokemon')
 
-module.exports = {
-  Query: query,
-  ListPokemon
-}
+const mainResolver = GMR.merge([pokemons, pokemon])
+
+module.exports = mainResolver
