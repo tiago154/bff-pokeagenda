@@ -3,6 +3,7 @@ type Pokemon {
   name: String!
   image: String!
   types: [String!]!
+  weaknesses: [Weakness!]!
 }
 
 type Query {

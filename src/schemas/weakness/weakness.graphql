@@ -1,0 +1,4 @@
+type Weakness {
+  name: String
+  quadrupleDamage: Boolean
+}
