@@ -1,11 +1,26 @@
+"""
+Entidade Pokemon
+"""
 type Pokemon {
+  "Id"
   id: Int!
+  "Nome"
   name: String!
+  "Imagem"
   image: String!
+  "Lista de tipos"
   types: [String!]!
+  "Lista de fraquezas"
   weaknesses: [Weakness!]!
+  "Altura em metros"
+  height: Float!
+  "Peso em kilos"
+  weight: Float!
 }
 
 type Query {
+  """
+  Traz informações relacionadas a um pokemon
+  """
   pokemon(id: Int!): Pokemon
 }

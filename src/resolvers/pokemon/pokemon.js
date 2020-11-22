@@ -1,6 +1,7 @@
 const { getTypeWeaknesses } = require('poke-types')
 
 const orderBy = require('../../util/orderBy')
+const divideBy10 = require('../../util/divideBy10')
 
 const formatName = name => name.charAt(0).toUpperCase() + name.slice(1)
 
@@ -28,8 +29,12 @@ const weaknesses = ({ body }) => {
   return weaknesses
 }
 
+const height = ({ body: { height } }) => divideBy10(height)
+
+const weight = ({ body: { weight } }) => divideBy10(weight)
+
 const types = ({ body }) => body.types
   .sort(orderBy('slot'))
   .map(typePokemon => typePokemon.type.name)
 
-module.exports = { id, name, image, types, weaknesses }
+module.exports = { id, name, image, types, weaknesses, height, weight }
