@@ -16,6 +16,10 @@ type Pokemon {
   height: Float!
   "Peso em kilos"
   weight: Float!
+  "Informações relacionadas a espécie"
+  species: Species
+  "Habilidades"
+  abilities: [Ability!]!
 }
 
 type Query {

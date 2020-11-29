@@ -1,0 +1,13 @@
+"""
+Possibilidades de generos
+"""
+enum GenreRate {
+  "BOTH = FEMININO/MASCULINO"
+  BOTH
+  "ONLY_MALE = APENAS MASCULINO"
+  ONLY_MALE
+  "ONLY_FEMALE = APENAS FEMININO"
+  ONLY_FEMALE
+  "UNKNOWN = DESCONHECIDO"
+  UNKNOWN
+}

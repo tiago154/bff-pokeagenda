@@ -1,4 +1,5 @@
 const { getTypeWeaknesses } = require('poke-types')
+const superagent = require('superagent')
 
 const orderBy = require('../../util/orderBy')
 const divideBy10 = require('../../util/divideBy10')
@@ -37,4 +38,24 @@ const types = ({ body }) => body.types
   .sort(orderBy('slot'))
   .map(typePokemon => typePokemon.type.name)
 
-module.exports = { id, name, image, types, weaknesses, height, weight }
+const species = ({ body: { species } }) =>
+  superagent
+    .get(species.url)
+    .catch(() => ({ body: '' }))
+
+const abilities = ({ body: { abilities } }) =>
+  abilities
+    .filter(ability => !ability.is_hidden)
+    .map(({ ability }) => ability)
+
+module.exports = {
+  id,
+  name,
+  image,
+  types,
+  weaknesses,
+  height,
+  weight,
+  species,
+  abilities
+}

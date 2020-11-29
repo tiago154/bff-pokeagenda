@@ -1,0 +1,9 @@
+"""
+Informações da espécie
+"""
+type Species {
+  "Categoria"
+  category: String
+  "Possibilidade de gêneros"
+  genreRate: GenreRate
+}

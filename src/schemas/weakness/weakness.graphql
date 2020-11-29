@@ -1,4 +1,9 @@
+"""
+Fraquezas do pokemon
+"""
 type Weakness {
+  "Nome"
   name: String
+  "Se o dano é quadruplo"
   quadrupleDamage: Boolean
 }
