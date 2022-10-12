@@ -24,7 +24,7 @@
     "nodemon": "^2.0.4"
   },
   "dependencies": {
-    "apollo-server": "^2.25.3",
+    "apollo-server": "^2.25.4",
     "dotenv": "^8.2.0",
     "graphql": "^14.7.0",
     "graphql-import-files": "^1.0.6",
